@@ -43,7 +43,6 @@ body {
   margin: 0;
   width: 100%;
   transition: transform 0.5s;
-  border: 1px solid red;
   flex: 1 0 auto;
   display: flex;
   justify-content: center;
@@ -69,11 +68,37 @@ body {
   background-image: url("image6.jpg");
 }
 
-.panel p {
-  font-size: 18px;
-  margin: 0;
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
 }
 
-.panel:hover {
+.panel p {
+  text-transform: uppercase;
+  font-family: "Amatic SC", cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 3em;
+}
+
+.panel.open {
   flex: 5;
+  font-size: 37px;
+}
+
+@media only screen and (max-width: 600px) {
+  .panel p {
+    font-size: 1em;
+  }
 }
