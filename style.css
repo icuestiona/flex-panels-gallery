@@ -37,6 +37,9 @@ body {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Add this line to prevent content overflow */
 }
 
 .panel > * {
@@ -95,6 +98,7 @@ body {
 .panel.open {
   flex: 5;
   font-size: 37px;
+  overflow: auto; /* Add this line to enable scrolling for the open panel */
 }
 
 @media only screen and (max-width: 600px) {
