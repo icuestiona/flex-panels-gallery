@@ -104,11 +104,13 @@ body {
 footer {
   text-align: center;
   padding: 15px;
+  font-size: 0.6rem;
   color: rgb(29, 29, 188);
 }
 
 footer a {
   text-decoration: none;
+  color: rgb(29, 29, 188);
 }
 
 @media only screen and (max-width: 600px) {
